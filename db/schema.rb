@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_164917) do
   create_table "payments", force: :cascade do |t|
     t.string "iban"
     t.float "amount"
+    t.string "account_holder"
     t.json "payment_json"
     t.date "date"
     t.bigint "tenant_id"
@@ -28,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_164917) do
 
   create_table "tenants", force: :cascade do |t|
     t.string "email"
-    t.string "accountholder"
+    t.string "account_holder"
     t.string "first_name"
     t.string "last_name"
     t.string "iban"
