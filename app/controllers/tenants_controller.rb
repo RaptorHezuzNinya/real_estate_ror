@@ -5,4 +5,11 @@ class TenantsController < ApplicationController
         @tenants = Tenant.all
         render json: @tenants
     end
+    def show
+        render json: @tenant
+    end
+    private
+    def set_tenant
+        @tenant = Tenant.find(params[:id])
+    end
 end
