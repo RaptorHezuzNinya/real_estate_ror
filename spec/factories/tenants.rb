@@ -1,7 +1,7 @@
 FactoryBot.define do
-    factory :todo do
+    factory :tenant do
 		email { Faker::Lorem.word }
-		accountholder { Faker::Lorem.word }
+		account_holder { Faker::Lorem.word }
 		first_name { Faker::Lorem.word }
 		last_name { Faker::Lorem.word }
 		iban { Faker::Lorem.word }

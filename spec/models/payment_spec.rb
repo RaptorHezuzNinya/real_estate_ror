@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Payment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+	it { should belong_to(:tenant)}
+	it { should validate_presence_of(:iban)}
+	it { should validate_presence_of(:amount)}
+	it { should validate_presence_of(:account_holder)}
+	it { should validate_presence_of(:payment_json)}
+	it { should validate_presence_of(:date)}
 end
