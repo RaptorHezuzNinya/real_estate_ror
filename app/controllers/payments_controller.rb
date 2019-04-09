@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
-  before_action :set_payment, only: [:show, :update, :destroy]
+  before_action :set_payment
+  before_action :set_tenant_payment, only: [:show, :update, :destroy]
 
   def index
     @payments = Payment.all
