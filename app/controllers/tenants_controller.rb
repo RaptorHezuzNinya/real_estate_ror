@@ -34,4 +34,8 @@ class TenantsController < ApplicationController
   def set_tenant
     @tenant = Tenant.find(params[:id])
   end
+
+  def set_tenant_payment
+    @payment = @tenant.payments.find_by!(id: params[:id]) if @tenant
+  end
 end
