@@ -1,8 +1,5 @@
 class User < ApplicationRecord
-  # encrypt password
   has_secure_password
-
-  # Model associations
   has_many :tenants, foreign_key: :tenant_id
 
   # Validations
